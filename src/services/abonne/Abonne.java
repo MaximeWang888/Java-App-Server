@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/Abonne")
@@ -20,9 +21,11 @@ public class Abonne extends HttpServlet {
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
 
+        HttpSession session = request.getSession(true);
+
         out.println("<html>");
         out.println("<head>");
-        String title = "test";
+        String title = "MEDIATHEQUE";
         out.println("<title>" + title + "</title>");
         out.println("</head>");
         out.println("<body bgcolor=\"white\">");
@@ -32,11 +35,14 @@ public class Abonne extends HttpServlet {
 
         out.println(login);
         out.println(password);
+
+
         try {
             out.println("\n");
             // Connection entre S ET Métier
-            Utilisateur a = Mediatheque.getInstance().getUser(login, password);
-            out.println(a.toString());
+            Utilisateur user = Mediatheque.getInstance().getUser(login, password);
+            out.println(user.toString());
+            session.setAttribute("user", user);
             out.println("\n");
         } catch (Exception e) {
             out.println(e.getMessage());

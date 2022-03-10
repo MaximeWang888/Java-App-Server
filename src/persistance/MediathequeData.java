@@ -65,8 +65,6 @@ public class MediathequeData implements PersistentMediatheque {
 		while (resultStatement.next()) {
 			String rLogin = resultStatement.getString("login");
 			String rPassword = resultStatement.getString("password");
-			System.out.println(rLogin);
-			System.out.println(rPassword);
 
 			if (rLogin.equals(login) && rPassword.equals(password))
 				return new Abonne(login, password);
