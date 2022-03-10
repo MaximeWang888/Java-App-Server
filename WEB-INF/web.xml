@@ -1,0 +1,7 @@
+<web-app>
+
+<listener>
+<listener-class>persistance.InitListener</listener-class>
+</listener>
+
+</web-app>

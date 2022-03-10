@@ -15,4 +15,6 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyN3wP4ssw0rd';
 flush privileges;
 exit;
 
+<h3>Start/Stop MySQL</h3>
 
+On windows search "Services" then found MySQL80
