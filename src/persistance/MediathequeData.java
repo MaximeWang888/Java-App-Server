@@ -5,7 +5,6 @@ import java.util.List;
 import mediatek2022.*;
 import persistance.modele.utilisateur.Abonne;
 
-import javax.rmi.CORBA.Util;
 
 // classe mono-instance  dont l'unique instance est connue de la médiatheque
 // via une auto-déclaration dans son bloc static

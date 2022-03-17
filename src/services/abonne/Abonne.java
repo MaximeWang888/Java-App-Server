@@ -5,7 +5,6 @@ import mediatek2022.Utilisateur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.*;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,17 +32,16 @@ public class Abonne extends HttpServlet {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
 
-        out.println(login);
-        out.println(password);
+        out.println("Ce que vous aviez saisi en login : " + login + "<br/>");
+
+        out.println("Ce que vous aviez saisi en mot de passe : " + password + "<br/>");
 
 
         try {
-            out.println("\n");
             // Connection entre S ET Métier
             Utilisateur user = Mediatheque.getInstance().getUser(login, password);
-            out.println(user.toString());
+            out.println("Vous êtes connecté en tant que " + user.toString());
             session.setAttribute("user", user);
-            out.println("\n");
         } catch (Exception e) {
             out.println(e.getMessage());
         }
