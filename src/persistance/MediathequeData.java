@@ -55,12 +55,13 @@ public class MediathequeData implements PersistentMediatheque {
 
 	private Utilisateur getInDB(String login, String password) throws SQLException {
 
-		Connection connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/appserv", "root", "rootsql");
+//		Connection connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/appserv", "root", "rootsql");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/appserv", "root", "rootsql");
 //		Connection connexion = DriverManager.getConnection("jdbc:mariadb://enthousiasme.io:22221/maxime?user=maxime&password=q5hBn4(BbNsGh.Q(");
 
 		String query = "SELECT * from utilisateur";
 
-		PreparedStatement dynStatement = connexion.prepareStatement(query);
+		PreparedStatement dynStatement = connection.prepareStatement(query);
 
 		ResultSet resultStatement = dynStatement.executeQuery();
 		System.out.println("MEDIATHEQUE DATA");

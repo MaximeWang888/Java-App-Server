@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/Abonne")
+@WebServlet("/espace-abonne")
 public class Abonne extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -24,7 +24,7 @@ public class Abonne extends HttpServlet {
 
         out.println("<html>");
         out.println("<head>");
-        String title = "MEDIATHEQUE";
+        String title = "Home Page";
         out.println("<title>" + title + "</title>");
         out.println("</head>");
         out.println("<body bgcolor=\"white\">");
@@ -50,8 +50,6 @@ public class Abonne extends HttpServlet {
         out.println("</html>");
 
     }
-
-
 
 }
 

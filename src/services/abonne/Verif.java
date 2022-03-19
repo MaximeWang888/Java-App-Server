@@ -28,7 +28,7 @@ public class Verif extends HttpServlet {
         out.println("</head>");
 
         out.println("<body bgcolor=\"white\">");
-// on récupère la variable session "user" et on l'affiche (sauf si null)
+        // on récupère la variable session "user" et on l'affiche (sauf si null)
         Utilisateur user = (Utilisateur) session.getAttribute("user");
         if (user!=null)
             out.println("Utilisateur enregistré dans la variable session user " + user);

@@ -3,6 +3,7 @@ package persistance;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+// Injection de dépendances des classes au moment de l'ouverture de tomcat
 public class InitListener implements ServletContextListener {
 
     @Override
