@@ -10,6 +10,7 @@ public class InitListener implements ServletContextListener {
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         try {
             Class.forName("persistance.MediathequeData");
+//            Class.forName("org.mariadb.jdbc.Driver");
             System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
